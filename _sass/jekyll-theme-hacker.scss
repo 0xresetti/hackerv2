@@ -72,6 +72,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid $conifer;
 }
 
+.prompt-container {
+  text-align: center;
+}
+
 .prompt {
   font-family: "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 34px;
