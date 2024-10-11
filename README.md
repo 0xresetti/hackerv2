@@ -2,9 +2,9 @@
 
 [![.github/workflows/ci.yaml](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-hacker)
 
-*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://0xresetti.github.io), or even [use it today](#usage).*
+*Hackerv2 is a customised Jekyll theme for my blog (and any other Github Pages people want to use it for). You can [preview the theme to see what it looks like](http://0xresetti.github.io), or even [use it today](#usage).*
 
-![Thumbnail of Hacker](thumbnail.png)
+![Thumbnail of Hackerv2](thumbnail.png)
 
 ## Usage
 
