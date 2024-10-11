@@ -4,11 +4,9 @@
 
 *Hackerv2 is a customised Jekyll theme for my blog (and any other Github Pages people want to use it for). You can [preview the theme to see what it looks like](http://0xresetti.github.io), or even [use it today](#usage).*
 
-![Thumbnail of Hackerv2](thumbnail.png)
-
 ## Usage
 
-To use the Hacker theme:
+To use the Hackerv2 theme:
 
 1. Add the following to your site's `_config.yml`:
 
