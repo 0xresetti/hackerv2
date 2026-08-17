@@ -14,5 +14,24 @@ $ox-chip-bg:  #1e0f11; // tag chip ground
 $ox-chip-fg:  #d9736c; // tag chip text
 $ox-inline:   #e0a9a4; // inline code text
 
-$container-max-width: 1240px;
+$container-max-width: 1320px;
 $measure: 76ch; // prose cap -- the single biggest readability gain
+
+// ---------------------------------------------------------------
+// Type scale. Everything sizes off $fs-base, so making the whole
+// site bigger or smaller later is a one-line change here.
+// ---------------------------------------------------------------
+$fs-base:  16px;    // body prose
+$fs-title: 17px;    // index entry titles
+$fs-sum:   15px;    // index entry summaries
+$fs-meta:  14px;    // dates, nav
+$fs-label: 12px;    // INDEX / uppercase labels
+$fs-chip:  11.5px;  // WRITEUP / NOTES chips
+$fs-brand: 18px;    // resetti@malware:~$
+$fs-code:  14.5px;  // inline code and code blocks
+$fs-h1:    30px;    // post title
+$fs-h2:    18px;    // post section headings
+
+// index gutter columns, sized to fit a date at $fs-meta
+$gutter-date: 116px;
+$gutter-kind: 108px;
