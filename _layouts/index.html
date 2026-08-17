@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  The index is generated from page front matter, not hand-written, so dates and
+  tags can exist at all. Every title and summary is the author's own text moved
+  verbatim into front matter -- nothing here rewrites it.
+
+  A page appears ONLY if it has both `date` and `kind`. That is the opt-in:
+  genomanalysis.md is unreleased and deliberately carries neither, so it builds
+  to a working URL but is linked from nowhere. Keep it that way.
+{%- endcomment -%}
+
+{%- assign entries = site.pages
+      | where_exp: "p", "p.date"
+      | where_exp: "p", "p.kind"
+      | where_exp: "p", "p.unlisted != true"
+      | sort: "date" | reverse -%}
+
+<section class="intro">
+  {{ content }}
+</section>
+
+<div class="idx-head">
+  <span>Index</span>
+  <span>{{ entries | size }} entries{% if entries.size > 0 %} &middot; since {{ entries.last.date | date: "%Y" }}{% endif %}</span>
+</div>
+
+<section class="index">
+  {%- for e in entries %}
+  <div class="row">
+    <div class="dt">{{ e.date | date: "%Y-%m-%d" }}</div>
+    <div><span class="kind{% if e.kind == 'NOTES' %} n{% endif %}">{{ e.kind }}</span></div>
+    <div>
+      <a class="ttl" href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      {%- if e.summary %}
+      <div class="sum">{{ e.summary | markdownify | remove_first: '<p>' | remove: '</p>' | strip }}</div>
+      {%- endif %}
+    </div>
+  </div>
+  {%- endfor %}
+</section>
