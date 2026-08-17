@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if page.summary %}<meta name="description" content="{{ page.summary | strip_html | truncate: 200 }}">{% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
     {% include head-custom.html %}
-
   </head>
 
   <body>
     <div class="container">
-      <header class="terminal-header">
-        <div class="prompt-container">
-          <span class="prompt">root@mr-resetti:~#</span>
-        </div>
+      <header class="top">
+        <a class="who" href="{{ '/' | relative_url }}">resetti<span>@malware:~$</span></a>
+        <nav class="nav">
+          <a href="{{ '/' | relative_url }}">index</a>
+          <a href="https://github.com/0xresetti">github</a>
+          <a href="https://twitter.com/fuckaslr">twitter</a>
+        </nav>
       </header>
-      <section id="main_content">
-        {{ content }}
-      </section>
+
+      {{ content }}
     </div>
   </body>
 </html>

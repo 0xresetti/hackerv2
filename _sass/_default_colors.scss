@@ -1,15 +1,18 @@
-$apple-blossom: #ac4142;
-$alto: #d0d0d0;
-$bouquet: #aa759f;
-$chelsea-cucumber: #90a959;
-$cod-grey: #151515;
-$conifer: #c80000;
-$dove-grey: #666;
-$gallery: #eaeaea;
-$grey: #888;
-$gulf-stream: #75b5aa;
-$hippie-blue: #9c0000;
-$potters-clay: #8f5536;
-$rajah: #f4bf75;
-$raw-sienna: #d28445;
-$silver-chalice: #aaa;
+// Oxblood palette.
+// Red lives in the ground, the rules and the furniture -- never in body prose.
+// Red body text on black at reading size is what made the old theme tiring.
+
+$ox-bg:       #0a0607; // page ground, red-biased black
+$ox-body:     #b3a8aa; // prose, warm bone
+$ox-strong:   #ece0e0; // titles, emphasis
+$ox-hot:      #e5484d; // prompt, hover, rules, code edge
+$ox-dim:      #6a595c; // dates, nav, captions
+$ox-rule:     #1f1214; // hairline row separators
+$ox-rule-hi:  #3d1a1c; // stronger rules, chip borders
+$ox-code-bg:  #120c0e; // code block ground
+$ox-chip-bg:  #1e0f11; // tag chip ground
+$ox-chip-fg:  #d9736c; // tag chip text
+$ox-inline:   #e0a9a4; // inline code text
+
+$container-max-width: 1240px;
+$measure: 76ch; // prose cap -- the single biggest readability gain

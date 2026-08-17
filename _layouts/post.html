@@ -2,13 +2,15 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
+<a class="back" href="{{ '/' | relative_url }}">&lt;- back to index</a>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
-
-{{content}}
-
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% if page.kind or page.date %}
+<div class="meta">
+  {% if page.kind %}<span class="kind{% if page.kind == 'NOTES' %} n{% endif %}">{{ page.kind }}</span>{% endif %}
+  {% if page.date %}<span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>{% endif %}
+</div>
 {% endif %}
+
+<article class="post">
+  {{ content }}
+</article>
